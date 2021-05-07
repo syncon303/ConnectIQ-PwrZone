@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="E:\OwnCloud\Bike\ConnectIQ\PWRzones\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="4" lineNum="17" pc="268435456" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="4" lineNum="18" pc="268435460" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="22" pc="268435479" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="24" pc="268435483" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="25" pc="268435524" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="26" pc="268435541" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="28" pc="268435561" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="29" pc="268435602" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="30" pc="268435670" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="32" pc="268435690" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="33" pc="268435731" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="5" lineNum="34" pc="268435799" symbol="onStart"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="6" lineNum="39" pc="268435820" symbol="onStop"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="7" lineNum="43" pc="268435825" symbol="getInitialView"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesApp.mc" id="7" lineNum="44" pc="268435829" symbol="getInitialView"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="72" pc="268435867" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="73" pc="268435871" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="74" pc="268435889" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="76" pc="268435902" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="77" pc="268435902" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="78" pc="268435923" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="80" pc="268435952" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="81" pc="268435973" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="83" pc="268436002" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="83" pc="268436015" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="84" pc="268436028" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="10" lineNum="84" pc="268436041" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="11" lineNum="87" pc="268436055" symbol="isSingleFieldLayout"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="11" lineNum="88" pc="268436059" symbol="isSingleFieldLayout"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="95" pc="268436114" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="97" pc="268436118" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="98" pc="268436129" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="99" pc="268436142" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="101" pc="268436161" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="104" pc="268436177" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="105" pc="268436202" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="106" pc="268436221" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="108" pc="268436265" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="109" pc="268436290" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="110" pc="268436309" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="112" pc="268436353" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="113" pc="268436366" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="114" pc="268436387" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="116" pc="268436425" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="118" pc="268436450" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="119" pc="268436463" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="120" pc="268436484" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="122" pc="268436522" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="12" lineNum="123" pc="268436547" symbol="compute"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="126" pc="268436568" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="128" pc="268436572" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="129" pc="268436591" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="131" pc="268436610" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="132" pc="268436640" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="133" pc="268436670" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="138" pc="268436711" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="139" pc="268436741" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="144" pc="268436771" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="145" pc="268436820" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="147" pc="268436843" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="148" pc="268436863" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="149" pc="268436873" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="150" pc="268436901" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="13" lineNum="151" pc="268436923" symbol="updateFieldDimensions"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="156" pc="268436964" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="157" pc="268436968" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="158" pc="268436981" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="162" pc="268436994" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="163" pc="268437025" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="166" pc="268437042" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="167" pc="268437055" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="170" pc="268437102" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="171" pc="268437128" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="174" pc="268437154" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="175" pc="268437154" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="176" pc="268437158" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="177" pc="268437171" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="179" pc="268437181" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="180" pc="268437194" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="183" pc="268437233" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="184" pc="268437237" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="185" pc="268437278" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="204" pc="268437343" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="205" pc="268437348" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="208" pc="268437416" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="209" pc="268437442" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="210" pc="268437522" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="211" pc="268437527" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="212" pc="268437604" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="14" lineNum="215" pc="268437693" symbol="onUpdate"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="219" pc="268437754" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="220" pc="268437758" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="221" pc="268437810" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="222" pc="268437844" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="223" pc="268437878" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="224" pc="268437897" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="225" pc="268437916" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="227" pc="268437945" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="229" pc="268437971" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="230" pc="268438003" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="231" pc="268438025" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="234" pc="268438037" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="235" pc="268438063" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="237" pc="268438085" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="238" pc="268438108" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="240" pc="268438137" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="241" pc="268438160" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="242" pc="268438195" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="15" lineNum="243" pc="268438224" symbol="fillVerticalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="246" pc="268438260" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="247" pc="268438264" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="248" pc="268438277" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="249" pc="268438316" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="250" pc="268438355" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="251" pc="268438402" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="252" pc="268438413" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="254" pc="268438417" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="255" pc="268438430" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="257" pc="268438440" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="258" pc="268438474" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="259" pc="268438509" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="260" pc="268438555" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="263" pc="268438571" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="264" pc="268438593" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="265" pc="268438615" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="266" pc="268438647" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="267" pc="268438676" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="268" pc="268438698" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="269" pc="268438710" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="270" pc="268438736" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="273" pc="268438758" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="274" pc="268438778" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="275" pc="268438789" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="276" pc="268438824" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="280" pc="268438858" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="281" pc="268438869" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="282" pc="268438904" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="286" pc="268438938" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="289" pc="268438950" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="290" pc="268438972" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="291" pc="268438997" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="292" pc="268439016" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="293" pc="268439020" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="295" pc="268439176" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="296" pc="268439202" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="16" lineNum="297" pc="268439216" symbol="fillHorizontalBar"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="300" pc="268439240" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="301" pc="268439244" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="302" pc="268439257" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="303" pc="268439296" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="304" pc="268439335" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="305" pc="268439364" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="306" pc="268439390" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="17" lineNum="307" pc="268439419" symbol="debug_testColors"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="311" pc="268439455" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="312" pc="268439459" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="314" pc="268439486" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="314" pc="268439499" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="315" pc="268439508" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="317" pc="268439512" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="318" pc="268439543" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="320" pc="268439554" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="321" pc="268439567" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="322" pc="268439616" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="324" pc="268439644" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="325" pc="268439655" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="326" pc="268439668" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="328" pc="268439699" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="329" pc="268439710" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="330" pc="268439723" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="332" pc="268439754" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="333" pc="268439765" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="334" pc="268439778" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="336" pc="268439809" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="337" pc="268439820" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="338" pc="268439833" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="340" pc="268439864" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="341" pc="268439875" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="342" pc="268439888" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="345" pc="268439919" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="346" pc="268439932" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="348" pc="268439954" symbol="calculateZone"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="67" pc="268440190" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="68" pc="268440207" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="6" pc="268440333" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="18" pc="268440458" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="29" pc="268440583" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesView.mc" id="18" lineNum="40" pc="268440708" symbol="&lt;init&gt;"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="20" lineNum="9" pc="268439980" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="20" lineNum="10" pc="268439984" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="20" lineNum="14" pc="268440005" symbol="initialize"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="21" lineNum="17" pc="268440026" symbol="setColor"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="21" lineNum="18" pc="268440030" symbol="setColor"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="22" lineNum="21" pc="268440041" symbol="draw"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="22" lineNum="22" pc="268440045" symbol="draw"/>
+        <entry filename="E:\\OwnCloud\\Bike\\ConnectIQ\\PWRzones\\source\\PWRzonesBackground.mc" id="22" lineNum="23" pc="268440077" symbol="draw"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="2" module="true" symbol="globals/PWRzonesApp"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="41" symbol="wVertBar"/>
+        <entry field="true" id="40" symbol="wHorizontalBar"/>
+        <entry id="48" method="true" symbol="fillVerticalBar"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="52" symbol="colorsActiveWhite"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry field="true" id="13" symbol="zoneAvgCount"/>
+        <entry field="true" id="54" symbol="colorsActiveBlack"/>
+        <entry field="true" id="53" symbol="colorsDimmedWhite"/>
+        <entry field="true" id="55" symbol="colorsDimmedBlack"/>
+        <entry id="10" module="true" symbol="globals/PWRzonesView"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="34" symbol="zonePercent"/>
+        <entry field="true" id="38" symbol="yPower"/>
+        <entry field="true" id="36" symbol="fHeight"/>
+        <entry field="true" id="22" symbol="DRAW_VERT_PROP"/>
+        <entry field="true" id="29" symbol="AppName"/>
+        <entry id="9" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" symbol="Fonts"/>
+        <entry id="49" method="true" symbol="fillHorizontalBar"/>
+        <entry id="51" method="true" symbol="calculateZone"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="43" symbol="zoneBuffer"/>
+        <entry id="3" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="20" symbol="PWRAVG_PROP"/>
+        <entry field="true" id="11" symbol="ftpValue"/>
+        <entry field="true" id="39" symbol="xHorizontalBar"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="12" symbol="pwrAvgCount"/>
+        <entry field="true" id="45" symbol="zoneBufOffset"/>
+        <entry id="8388771" module="true" symbol="Drawables"/>
+        <entry field="true" id="33" symbol="zone"/>
+        <entry id="24" module="true" symbol="Menus"/>
+        <entry id="7" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="35" symbol="fWidth"/>
+        <entry field="true" id="32" symbol="pwrZoneAvg"/>
+        <entry id="46" method="true" symbol="isSingleFieldLayout"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="17" object="true" symbol="PWRzonesApp"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry field="true" id="19" symbol="FTP_PROP"/>
+        <entry field="true" id="8388742" symbol="currentPower"/>
+        <entry id="8389131" method="true" symbol="setColor"/>
+        <entry id="8" module="true" symbol="globals/Rez/JsonData"/>
+        <entry field="true" id="42" symbol="pwrBuffer"/>
+        <entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="27" symbol="average_prop_title"/>
+        <entry field="true" id="14" symbol="drawVerticalBar"/>
+        <entry field="true" id="26" symbol="ftp_prop_title"/>
+        <entry field="true" id="16" symbol="ZONE_BUFFER_SIZE"/>
+        <entry id="8388769" module="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" symbol="JsonData"/>
+        <entry field="true" id="8389130" symbol="mColor"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="25" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="28" symbol="zone_average_prop_title"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="44" symbol="pwrBufOffset"/>
+        <entry field="true" id="30" symbol="pValue"/>
+        <entry field="true" id="37" symbol="yZone"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="15" symbol="PWR_BUFFER_SIZE"/>
+        <entry field="true" id="21" symbol="ZONEAVG_PROP"/>
+        <entry id="23" module="true" symbol="Layouts"/>
+        <entry id="18" object="true" symbol="PWRzonesView"/>
+        <entry id="50" method="true" symbol="debug_testColors"/>
+        <entry id="6" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="31" symbol="pwrAvg"/>
+        <entry id="47" method="true" symbol="updateFieldDimensions"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435820" name="state" stackId="1" startPc="268435479"/>
+        <entry arg="true" endPc="268435825" name="state" stackId="1" startPc="268435820"/>
+        <entry endPc="268436054" name="i" stackId="1" startPc="268435871"/>
+        <entry endPc="268436425" name="i" stackId="2" startPc="268436387"/>
+        <entry endPc="268436522" name="i" stackId="3" startPc="268436484"/>
+        <entry arg="true" endPc="268436568" name="info" stackId="1" startPc="268436114"/>
+        <entry endPc="268436963" name="hSpacing" stackId="6" startPc="268436572"/>
+        <entry endPc="268436963" name="sizeZone" stackId="3" startPc="268436572"/>
+        <entry endPc="268436963" name="sizeZone2" stackId="5" startPc="268436572"/>
+        <entry endPc="268436963" name="wSizeMax" stackId="4" startPc="268436572"/>
+        <entry endPc="268436963" name="sizePower" stackId="2" startPc="268436572"/>
+        <entry arg="true" endPc="268436964" name="dc" stackId="1" startPc="268436568"/>
+        <entry endPc="268437753" name="height" stackId="3" startPc="268436968"/>
+        <entry endPc="268437753" name="foregroundColor" stackId="5" startPc="268436968"/>
+        <entry endPc="268437753" name="backgroundColor" stackId="4" startPc="268436968"/>
+        <entry endPc="268437753" name="zValue" stackId="6" startPc="268436968"/>
+        <entry endPc="268437753" name="width" stackId="2" startPc="268436968"/>
+        <entry endPc="268437753" name="displayZone" stackId="7" startPc="268436968"/>
+        <entry arg="true" endPc="268437754" name="dc" stackId="1" startPc="268436964"/>
+        <entry endPc="268438259" name="radius" stackId="14" startPc="268437758"/>
+        <entry endPc="268438259" name="yHalf" stackId="12" startPc="268437758"/>
+        <entry endPc="268438259" name="yValue" stackId="9" startPc="268437758"/>
+        <entry endPc="268438259" name="gradSmall" stackId="11" startPc="268437758"/>
+        <entry endPc="268438259" name="gradLarge" stackId="10" startPc="268437758"/>
+        <entry endPc="268438259" name="yQuarter" stackId="13" startPc="268437758"/>
+        <entry arg="true" endPc="268438260" name="x" stackId="3" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="w" stackId="5" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="dc" stackId="1" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="barColor" stackId="7" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="h" stackId="6" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="percentValue" stackId="2" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="frameColor" stackId="8" startPc="268437754"/>
+        <entry arg="true" endPc="268438260" name="y" stackId="4" startPc="268437754"/>
+        <entry endPc="268439239" name="xPointer" stackId="18" startPc="268438264"/>
+        <entry endPc="268439239" name="yBarSize" stackId="13" startPc="268438264"/>
+        <entry endPc="268439239" name="colorsActive" stackId="9" startPc="268438264"/>
+        <entry endPc="268439239" name="yBarPos" stackId="12" startPc="268438264"/>
+        <entry endPc="268439239" name="colorsInactive" stackId="10" startPc="268438264"/>
+        <entry endPc="268439239" name="zoneWidth" stackId="14" startPc="268438264"/>
+        <entry endPc="268439239" name="radius" stackId="15" startPc="268438264"/>
+        <entry endPc="268439239" name="xOffset" stackId="16" startPc="268438264"/>
+        <entry endPc="268439239" name="backgroundColor" stackId="8" startPc="268438264"/>
+        <entry endPc="268439239" name="coordPoly" stackId="22" startPc="268438264"/>
+        <entry endPc="268439239" name="xBarPos" stackId="17" startPc="268438264"/>
+        <entry endPc="268439239" name="wHalf" stackId="21" startPc="268438264"/>
+        <entry endPc="268439239" name="hPointer" stackId="20" startPc="268438264"/>
+        <entry endPc="268439239" name="yPointer" stackId="19" startPc="268438264"/>
+        <entry endPc="268439239" name="outlineColor" stackId="11" startPc="268438264"/>
+        <entry arg="true" endPc="268439240" name="x" stackId="4" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="w" stackId="6" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="zone" stackId="2" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="dc" stackId="1" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="h" stackId="7" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="value" stackId="3" startPc="268438260"/>
+        <entry arg="true" endPc="268439240" name="y" stackId="5" startPc="268438260"/>
+        <entry endPc="268439454" name="backgroundColor" stackId="7" startPc="268439244"/>
+        <entry endPc="268439454" name="colorsInactive" stackId="9" startPc="268439244"/>
+        <entry endPc="268439454" name="colorsActive" stackId="8" startPc="268439244"/>
+        <entry arg="true" endPc="268439455" name="x" stackId="3" startPc="268439240"/>
+        <entry arg="true" endPc="268439455" name="w" stackId="5" startPc="268439240"/>
+        <entry arg="true" endPc="268439455" name="zone" stackId="2" startPc="268439240"/>
+        <entry arg="true" endPc="268439455" name="dc" stackId="1" startPc="268439240"/>
+        <entry arg="true" endPc="268439455" name="h" stackId="6" startPc="268439240"/>
+        <entry arg="true" endPc="268439455" name="y" stackId="4" startPc="268439240"/>
+        <entry endPc="268439641" name="ratioMax" stackId="3" startPc="268439554"/>
+        <entry endPc="268439979" name="ratio" stackId="2" startPc="268439459"/>
+        <entry arg="true" endPc="268439980" name="power" stackId="1" startPc="268439455"/>
+        <entry endPc="268440025" name="dictionary" stackId="1" startPc="268439984"/>
+        <entry arg="true" endPc="268440041" name="color" stackId="1" startPc="268440026"/>
+        <entry arg="true" endPc="268440090" name="dc" stackId="1" startPc="268440041"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ftp_prop_title"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="average_prop_title"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="zone_average_prop_title"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="103" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Background" offset="222" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/PWRzonesApp" offset="293" parentId="globals" symbolId="PWRzonesApp" type="class"/>
+        <dataEntry label="globals/PWRzonesApp/statics" offset="364" parentId="globals" symbolId="globals/PWRzonesApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="427" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="506" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="545" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="576" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="607" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="638" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="669" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/PWRzonesView" offset="732" parentId="globals" symbolId="PWRzonesView" type="class"/>
+        <dataEntry label="globals/PWRzonesView/statics" offset="971" parentId="globals" symbolId="globals/PWRzonesView" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="initialize" parent="PWRzonesApp">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="PWRzonesApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="PWRzonesApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="PWRzonesApp">
+            <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="PWRzonesView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="isSingleFieldLayout" parent="PWRzonesView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="compute" parent="PWRzonesView">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="updateFieldDimensions" parent="PWRzonesView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="PWRzonesView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="fillVerticalBar" parent="PWRzonesView">
+            <param id="dc"/>
+            <param id="percentValue"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="w"/>
+            <param id="h"/>
+            <param id="barColor"/>
+            <param id="frameColor"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="fillHorizontalBar" parent="PWRzonesView">
+            <param id="dc"/>
+            <param id="zone"/>
+            <param id="value"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="debug_testColors" parent="PWRzonesView">
+            <param id="dc"/>
+            <param id="zone"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="w"/>
+            <param id="h"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="calculateZone" parent="PWRzonesView">
+            <param id="power"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="Background">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="setColor" parent="Background">
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="draw" parent="Background">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

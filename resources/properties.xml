@@ -1,0 +1,30 @@
+<resources>
+    <properties>
+        <property id="ftp_prop" type="number">250</property>
+        <property id="average_prop" type="number">3</property>
+        <property id="zone_average_prop" type="number">6</property>
+        <!-- <property id="draw_vert_bar_prop" type="boolean">true</property> -->
+    </properties>
+
+    <strings>
+       <string id="ftp_prop_title">Functional threshold power [W]</string>
+       <string id="average_prop_title">Power value averaging [s]</string>
+       <string id="zone_average_prop_title">Zone value averaging [s]</string>
+       <!-- <string id="draw_vert_bar_prop_title">Draw vertical bars</string> -->
+    </strings>
+
+    <settings>
+        <setting propertyKey="@Properties.ftp_prop" title="@Strings.ftp_prop_title">
+            <settingConfig type="numeric" />
+        </setting>
+        <setting propertyKey="@Properties.average_prop" title="@Strings.average_prop_title">
+            <settingConfig type="numeric" />
+        </setting>
+        <setting propertyKey="@Properties.zone_average_prop" title="@Strings.zone_average_prop_title">
+            <settingConfig type="numeric" />
+        </setting>
+        <!-- <setting propertyKey="@Properties.draw_vert_bar_prop" title="@Strings.draw_vert_bar_prop_title"> -->
+            <!-- <settingConfig type="boolean" /> -->
+        <!-- </setting> -->
+    </settings>
+</resources>
