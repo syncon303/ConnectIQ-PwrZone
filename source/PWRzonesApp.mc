@@ -11,29 +11,19 @@ class PWRzonesApp extends Application.AppBase {
     static const FTP_PROP = "ftp_prop";
     static const PWRAVG_PROP = "average_prop";
     static const ZONEAVG_PROP = "zone_average_prop";
-    static const DRAW_VERT_PROP = "draw_vert_bar_prop";
 
     function initialize() {
         AppBase.initialize();
+//        fetchSettings();
     }
 
     // onStart() is called on application start up
     function onStart(state) {
-        // read FTP data from storage (app options)
-        $.ftpValue = Application.Storage.getValue(FTP_PROP);
-        if ($.ftpValue == null) {
-            $.ftpValue = 220;
-        }
-        $.pwrAvgCount = Application.Storage.getValue(PWRAVG_PROP);
-        if ($.pwrAvgCount == null or $.pwrAvgCount < 1) {
-            $.pwrAvgCount = 3;
-        }
-        $.pwrAvgCount = ($.pwrAvgCount > PWR_BUFFER_SIZE) ? PWR_BUFFER_SIZE: $.pwrAvgCount;
-        $.zoneAvgCount = Application.Storage.getValue(ZONEAVG_PROP);
-        if ($.zoneAvgCount == null or $.zoneAvgCount < 1) {
-            $.zoneAvgCount = 6;
-        }
-        $.zoneAvgCount = ($.zoneAvgCount > PWR_BUFFER_SIZE) ? ZONE_BUFFER_SIZE: $.zoneAvgCount;
+        fetchSettings();
+    }
+
+    function onSettingsChanged() {
+        fetchSettings();
     }
 
     // onStop() is called when your application is exiting
@@ -43,6 +33,33 @@ class PWRzonesApp extends Application.AppBase {
     //! Return the initial view of your application here
     function getInitialView() {
         return [ new PWRzonesView() ];
+    }
+
+    function fetchSettings() {
+        // read FTP data from storage (app properties)
+        $.ftpValue = Application.Properties.getValue(FTP_PROP);
+//        System.println("FTP loaded = " + $.ftpValue);
+        if ($.ftpValue == null) {
+            $.ftpValue = 250;
+        }
+        $.pwrAvgCount = Application.Properties.getValue(PWRAVG_PROP);
+//        System.println("PwrAvg loaded = " + $.pwrAvgCount);
+        if ($.pwrAvgCount == null or $.pwrAvgCount < 1) {
+            $.pwrAvgCount = 3;
+        }
+        else if ($.pwrAvgCount > PWR_BUFFER_SIZE) {
+            $.pwrAvgCount = PWR_BUFFER_SIZE;
+        }
+
+        $.zoneAvgCount = Application.Properties.getValue(ZONEAVG_PROP);
+//        System.println("ZoneAvg loaded = " + $.zoneAvgCount);
+        if ($.zoneAvgCount == null or $.zoneAvgCount < 1) {
+            $.zoneAvgCount = 6;
+        }
+        else if ($.zoneAvgCount > ZONE_BUFFER_SIZE) {
+            $.zoneAvgCount = ZONE_BUFFER_SIZE;
+        }
+        $.zoneAvgCount = ($.zoneAvgCount > PWR_BUFFER_SIZE) ? ZONE_BUFFER_SIZE: $.zoneAvgCount;
     }
 
 }

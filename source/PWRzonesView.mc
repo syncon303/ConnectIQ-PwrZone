@@ -62,8 +62,9 @@ class PWRzonesView extends Ui.DataField {
     hidden var xHorizontalBar;
     hidden var wHorizontalBar;
     hidden var hHorizontalBar;
-    hidden var powerFont = Gfx.FONT_NUMBER_MILD;
-    hidden var zoneFont = Gfx.FONT_TINY;
+    hidden var powerFont = Gfx.FONT_NUMBER_MILD;  // this font seems to be the one used on default datafields
+//    hidden var zoneFont = Gfx.FONT_TINY;
+    hidden var zoneFont = Gfx.FONT_SMALL;
     hidden var unitFont = Gfx.FONT_SMALL;
 
     // pwrBuffer is used to calculate rolling average of power.
@@ -146,7 +147,7 @@ class PWRzonesView extends Ui.DataField {
 
         // calculate spacing between edge of the field and text, assuming we leave no pixels between
         // both lines of text
-        var hSpacing = ((fHeight - sizeZone[1] - sizePower[1] - 0) / 2.0).toNumber();
+        var hSpacing = ((fHeight - sizeZone[1] - sizePower[1] - 4) / 2.0).toNumber();
         hSpacing = (hSpacing < -1) ? -1 : hSpacing;
 
         // calculate text and zone bar positions
