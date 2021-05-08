@@ -7,7 +7,7 @@ class PWRzonesView extends Ui.DataField {
         Gfx.COLOR_TRANSPARENT,
         0x0080FF,  // 1 blue
         0x00C000,  // 2 green
-        0xFFA000,  // 3 yellow
+        0xE0E000,  // 3 yellow
         0xFF6000,  // 4 orange
         0xFF0000,  // 5 red
         0x5500AA,  // 6 purple
@@ -19,7 +19,7 @@ class PWRzonesView extends Ui.DataField {
         Gfx.COLOR_TRANSPARENT,
         0xC0E0FF, // 1 blue
         0xC0FFC0, // 2 green
-        0xFFE7C0, // 3 yellow
+        0xFFFF80, // 3 yellow
         0xFFD7C0, // 4 orange
         0xFFC0C0, // 5 red
         0xE0C0FF, // 6 purple
@@ -30,10 +30,10 @@ class PWRzonesView extends Ui.DataField {
         Gfx.COLOR_TRANSPARENT,
         0x00FFFF,  // 1 blue
         0x00FF00,  // 2 green
-        0xFFAA00,  // 3 yellow
+        0xFFFF00,  // 3 yellow
         0xFF5500,  // 4 orange
         0xFF0000,  // 5 red
-        0x5500AA,  // 6 purple
+        0x8000FF,  // 6 purple
         0xC0C0C0,  // 7 light grey
     ];
     // color scheme for dimmed zones on black background
@@ -41,10 +41,10 @@ class PWRzonesView extends Ui.DataField {
         Gfx.COLOR_TRANSPARENT,
         0x00557F, // 1 teal
         0x007F00, // 2 green
-        0x7F5500, // 3 yellow
+        0x606000, // 3 yellow
         0x7F2A00, // 4 orange
         0x7F0000, // 5 red
-        0x2A0055, // 6 purple
+        0x300060, // 6 purple
         0x202020, // 7 dark grey
     ];
     hidden var pValue;
@@ -63,9 +63,9 @@ class PWRzonesView extends Ui.DataField {
     hidden var wHorizontalBar;
     hidden var hHorizontalBar;
     hidden var powerFont = Gfx.FONT_NUMBER_MILD;  // this font seems to be the one used on default datafields
-//    hidden var zoneFont = Gfx.FONT_TINY;
+    // hidden var zoneFont = Gfx.FONT_TINY;
     hidden var zoneFont = Gfx.FONT_SMALL;
-    hidden var unitFont = Gfx.FONT_SMALL;
+    hidden var unitFont = Gfx.FONT_MEDIUM;
 
     // pwrBuffer is used to calculate rolling average of power.
     // Every second (ie. when compute() is called) storing reported power value
@@ -153,8 +153,8 @@ class PWRzonesView extends Ui.DataField {
         // calculate text and zone bar positions
         yZone = hSpacing;
         yPower = fHeight - hSpacing - sizePower[1] + 3;
-        yUnit = fHeight - hSpacing - sizeUnit[1] - 1;
-        xPower = (fWidth/2 + sizePower[0]/2 + 0.5).toNumber();
+        yUnit = fHeight - hSpacing - sizeUnit[1] +2;
+        xPower = (fWidth/2 + sizePower[0]*5/8 + 0.5).toNumber();
         xHorizontalBar = sizeZone[0] + 2;
         wHorizontalBar = fWidth - sizeZone[0] - sizeZone2[0] - 4;
         hHorizontalBar = sizeZone[1];
@@ -194,15 +194,9 @@ class PWRzonesView extends Ui.DataField {
             // limit percent display to 99 to save a some space and make horizontal bar more centered on field
             zonePercent = (zonePercent > 99) ? 99 : zonePercent;
         }
-        // var debug_testPalette = true;
-        // if (debug_testPalette) {
-        //     debug_displayPalette();
-        // }
-        // var debug_testFonts = true;
-        // if (debug_testFonts) {
-        //   debug_printFonts();
-        //   return;
-        // }
+        // debug_displayPalette(dc);
+        // debug_printFonts(dc);
+        // return;
 
         if (showZoneBar) {
             drawPowerZoneBar(dc, zone, zonePercent, xHorizontalBar, yZone+2, wHorizontalBar, hHorizontalBar);
@@ -210,7 +204,7 @@ class PWRzonesView extends Ui.DataField {
         // Draw the power and zone information
         dc.setColor(foregroundColor, Gfx.COLOR_TRANSPARENT);
         dc.drawText(xPower, yPower, powerFont, pwrAvg.format("%d"), Gfx.TEXT_JUSTIFY_RIGHT);
-        dc.drawText(xPower+2, yUnit, Gfx.FONT_SMALL, "W", Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(xPower+2, yUnit, Gfx.FONT_SMALL, "w", Gfx.TEXT_JUSTIFY_LEFT);
         if (showZoneBar) {
             dc.drawText(1, yZone, zoneFont, "Z" + zone.format("%d"), Gfx.TEXT_JUSTIFY_LEFT);
             dc.drawText(fWidth - 1, yZone, zoneFont, zonePercent.format("%2d") + "%", Gfx.TEXT_JUSTIFY_RIGHT);
@@ -316,7 +310,7 @@ class PWRzonesView extends Ui.DataField {
 
     // -----------------------------------------------------------------------------------------------------------
     // DEBUG function - testing palette colors for zone display
-    function debug_displayPalette() {
+    function debug_displayPalette(dc) {
         var ddw = 10;
         debug_testColors(dc, 1, 0, 30, ddw, fHeight-30);
         debug_testColors(dc, 2, ddw, 30, ddw, fHeight-30);
@@ -337,7 +331,7 @@ class PWRzonesView extends Ui.DataField {
         dc.fillRectangle(x, y+h/2, w, h/2);
     }
     // DEBUG function - test fonts
-    function debug_printFonts() {
+    function debug_printFonts(dc) {
         var ddw = 10;
         debug_drawFont(dc, 0, yPower, "0", Gfx.FONT_SYSTEM_NUMBER_MILD);
         debug_drawFont(dc, 25, yPower, "0", Gfx.FONT_NUMBER_MILD);

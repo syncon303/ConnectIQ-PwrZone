@@ -14,7 +14,6 @@ class PWRzonesApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
-//        fetchSettings();
     }
 
     // onStart() is called on application start up
@@ -38,12 +37,12 @@ class PWRzonesApp extends Application.AppBase {
     function fetchSettings() {
         // read FTP data from storage (app properties)
         $.ftpValue = Application.Properties.getValue(FTP_PROP);
-//        System.println("FTP loaded = " + $.ftpValue);
+        // System.println("FTP loaded = " + $.ftpValue);
         if ($.ftpValue == null) {
             $.ftpValue = 250;
         }
         $.pwrAvgCount = Application.Properties.getValue(PWRAVG_PROP);
-//        System.println("PwrAvg loaded = " + $.pwrAvgCount);
+        // System.println("PwrAvg loaded = " + $.pwrAvgCount);
         if ($.pwrAvgCount == null or $.pwrAvgCount < 1) {
             $.pwrAvgCount = 3;
         }
@@ -52,14 +51,12 @@ class PWRzonesApp extends Application.AppBase {
         }
 
         $.zoneAvgCount = Application.Properties.getValue(ZONEAVG_PROP);
-//        System.println("ZoneAvg loaded = " + $.zoneAvgCount);
+        // System.println("ZoneAvg loaded = " + $.zoneAvgCount);
         if ($.zoneAvgCount == null or $.zoneAvgCount < 1) {
             $.zoneAvgCount = 6;
         }
         else if ($.zoneAvgCount > ZONE_BUFFER_SIZE) {
             $.zoneAvgCount = ZONE_BUFFER_SIZE;
         }
-        $.zoneAvgCount = ($.zoneAvgCount > PWR_BUFFER_SIZE) ? ZONE_BUFFER_SIZE: $.zoneAvgCount;
     }
-
 }
