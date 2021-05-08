@@ -3,10 +3,10 @@ using Toybox.Graphics as Gfx;
 
 class PWRzonesView extends Ui.DataField {
     // color scheme for active zones on white background
-    static var colorsActiveWhite = [
+    var colorsActiveWhite = [
         Gfx.COLOR_TRANSPARENT,
         0x0080FF,  // 1 blue
-        0x00FF00,  // 2 green
+        0x00C000,  // 2 green
         0xFFA000,  // 3 yellow
         0xFF6000,  // 4 orange
         0xFF0000,  // 5 red
@@ -15,7 +15,7 @@ class PWRzonesView extends Ui.DataField {
     ];
     // color scheme for dimmed zones on white background
     // TODO: Make brighter
-    static var colorsDimmedWhite = [
+    var colorsDimmedWhite = [
         Gfx.COLOR_TRANSPARENT,
         0xC0E0FF, // 1 blue
         0xC0FFC0, // 2 green
@@ -26,7 +26,7 @@ class PWRzonesView extends Ui.DataField {
         0xC0C0C0, // 7 light grey
     ];
     // color scheme for active zones on black background
-    static var colorsActiveBlack = [
+    var colorsActiveBlack = [
         Gfx.COLOR_TRANSPARENT,
         0x00FFFF,  // 1 blue
         0x00FF00,  // 2 green
@@ -37,7 +37,7 @@ class PWRzonesView extends Ui.DataField {
         0xC0C0C0,  // 7 light grey
     ];
     // color scheme for dimmed zones on black background
-    static var colorsDimmedBlack = [
+    var colorsDimmedBlack = [
         Gfx.COLOR_TRANSPARENT,
         0x00557F, // 1 teal
         0x007F00, // 2 green
@@ -56,10 +56,15 @@ class PWRzonesView extends Ui.DataField {
     hidden var fWidth = -1;
     hidden var fHeight = -1;
     hidden var yZone;
+    hidden var xPower;
     hidden var yPower;
+    hidden var yUnit;
     hidden var xHorizontalBar;
     hidden var wHorizontalBar;
-    hidden var wVertBar;
+    hidden var hHorizontalBar;
+    hidden var powerFont = Gfx.FONT_NUMBER_MILD;
+    hidden var zoneFont = Gfx.FONT_TINY;
+    hidden var unitFont = Gfx.FONT_SMALL;
 
     // pwrBuffer is used to calculate rolling average of power.
     // Every second (ie. when compute() is called) storing reported power value
@@ -93,7 +98,6 @@ class PWRzonesView extends Ui.DataField {
     // Note that compute() and onUpdate() are asynchronous, and there is no
     // guarantee that compute() will be called before onUpdate().
     function compute(info) {
-        // See Activity.Info in the documentation for available information.
         if(info has :currentPower){
             if(info.currentPower != null){
                 pValue = info.currentPower;
@@ -101,54 +105,58 @@ class PWRzonesView extends Ui.DataField {
                 pValue = 0;
             }
         }
+        else {
+            return;
+        }
+        // store current power value into both buffers and increment pointers
         pwrBuffer[pwrBufOffset] = pValue;
+        zoneBuffer[zoneBufOffset] = pValue;
         pwrBufOffset++;
         pwrBufOffset = (pwrBufOffset == pwrAvgCount) ? 0 : pwrBufOffset;
-
-        zoneBuffer[zoneBufOffset] = pValue;
         zoneBufOffset++;
         zoneBufOffset = (zoneBufOffset == zoneAvgCount) ? 0 : zoneBufOffset;
+
         // get rolling average of power for display of power
         pwrAvg = 0;
         for (var i = 0; i < pwrAvgCount; i++) {
             pwrAvg += pwrBuffer[i];
         }
         pwrAvg = pwrAvg / pwrAvgCount;
+
         // get rolling average of power for zone calculation
         pwrZoneAvg = 0;
         for (var i = 0; i < zoneAvgCount; i++) {
             pwrZoneAvg += zoneBuffer[i];
         }
         pwrZoneAvg = pwrZoneAvg / zoneAvgCount;
+
+        // calculate zone and zone percentage
         calculateZone(pwrZoneAvg);
     }
 
     function updateFieldDimensions(dc) {
-        // System.println("Init dimensions");
         fWidth = dc.getWidth();
         fHeight = dc.getHeight();
-        // get maximum size of text for both fields
-        var sizePower = dc.getTextDimensions("2000", Gfx.FONT_LARGE);
-        var sizeZone = dc.getTextDimensions("Z4 100%", Gfx.FONT_TINY);
-        var wSizeMax = (sizePower[0] > sizeZone[0]) ? sizePower[0] : sizeZone[0];
 
-        // wVertBar = ((fWidth - wSizeMax) / 2.0 - 0.5).toNumber() - 5;
-        // wVertBar = (wVertBar < 30) ? wVertBar : 30; // limit bar width to 30
+        // get maximum size of all text fields
+        var sizePower = dc.getTextDimensions("00", powerFont);
+        var sizeZone = dc.getTextDimensions("Z4", zoneFont);
+        var sizeZone2 = dc.getTextDimensions("99%", zoneFont);
+        var sizeUnit = dc.getTextDimensions("W", unitFont);
 
-        sizeZone = dc.getTextDimensions("Z4", Gfx.FONT_TINY);
-        var sizeZone2 = dc.getTextDimensions("99%", Gfx.FONT_TINY);
-
-
-        // calculate spacing between edge of the field and text, assuming we leave 8 pixels between
+        // calculate spacing between edge of the field and text, assuming we leave no pixels between
         // both lines of text
         var hSpacing = ((fHeight - sizeZone[1] - sizePower[1] - 0) / 2.0).toNumber();
         hSpacing = (hSpacing < -1) ? -1 : hSpacing;
-        // text positions if text is not vertically justfied
-        System.println(hSpacing);
+
+        // calculate text and zone bar positions
         yZone = hSpacing;
-        yPower = fHeight - hSpacing - sizePower[1];
+        yPower = fHeight - hSpacing - sizePower[1] + 3;
+        yUnit = fHeight - hSpacing - sizeUnit[1] - 1;
+        xPower = (fWidth/2 + sizePower[0]/2 + 0.5).toNumber();
         xHorizontalBar = sizeZone[0] + 2;
         wHorizontalBar = fWidth - sizeZone[0] - sizeZone2[0] - 4;
+        hHorizontalBar = sizeZone[1];
     }
 
     // Display the value you computed here. This will be called
@@ -167,83 +175,52 @@ class PWRzonesView extends Ui.DataField {
         var foregroundColor = (backgroundColor == Gfx.COLOR_BLACK) ? Gfx.COLOR_WHITE: Gfx.COLOR_BLACK;
 
         // Color the background color
+        // dc.setColor(foregroundColor, backgroundColor);
+        // dc.clear();
         dc.setColor(backgroundColor, Gfx.COLOR_TRANSPARENT);
         dc.fillRectangle(0, 0, width, height);
-        // dc.clear();
 
-        var zValue;
-        var displayZone = false;
+        var zValue = "";
+        var showZoneBar = false;
         if (zone == null) {
-            zValue = "--";
+            zValue = "__";
         }
         else if (zonePercent == null) {
-            zValue = "PWR " + pwrAvgCount.format("%d") + "s";
+            zValue = pwrAvgCount.format("%d") + "s Power";
         }
         else {
-            displayZone = true;
+            showZoneBar = true;
+            // limit percent display to 99 to save a some space and make horizontal bar more centered on field
             zonePercent = (zonePercent > 99) ? 99 : zonePercent;
-            zValue = "Z" + zone.format("%d") + " " + zonePercent.format("%2d") + "%";
         }
         // var debug_testPalette = true;
         // if (debug_testPalette) {
-        //     var ddw = 10;
-        //     debug_testColors(dc, 1, 0, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 2, ddw, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 3, ddw*2, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 4, ddw*3, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 5, fWidth-ddw*3, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 6, fWidth-ddw*2, 30, ddw, fHeight-30);
-        //     debug_testColors(dc, 7, fWidth-ddw, 30, ddw, fHeight-30);
+        //     debug_displayPalette();
         // }
-        // if ($.drawVerticalBar) {
-        //     draw vertical bars on the field corresponding to the current power zone
-        //     var barColor = (backgroundColor == Gfx.COLOR_BLACK) ? zoneColorsDark[zone] : zoneColorsBright[zone];
-        //     fillVerticalBar(dc, zonePercent, 1, 1, wVertBar, fHeight-2, barColor, foregroundColor);
-        //     fillVerticalBar(dc, zonePercent, fWidth-wVertBar-1, 1, wVertBar, fHeight-2, barColor, foregroundColor);
+        // var debug_testFonts = true;
+        // if (debug_testFonts) {
+        //   debug_printFonts();
+        //   return;
         // }
-        if (displayZone) {
-            fillHorizontalBar(dc, zone, zonePercent, xHorizontalBar, yZone+2, wHorizontalBar, 18);
+
+        if (showZoneBar) {
+            drawPowerZoneBar(dc, zone, zonePercent, xHorizontalBar, yZone+2, wHorizontalBar, hHorizontalBar);
         }
         // Draw the power and zone information
         dc.setColor(foregroundColor, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(fWidth / 2, yPower, Gfx.FONT_LARGE, pwrAvg.format("%d"), Gfx.TEXT_JUSTIFY_CENTER);
-        if (displayZone) {
-            dc.drawText(1, yZone, Gfx.FONT_TINY, "Z" + zone.format("%d"), Gfx.TEXT_JUSTIFY_LEFT);
-            dc.drawText(fWidth - 1, yZone, Gfx.FONT_TINY, zonePercent.format("%2d") + "%", Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(xPower, yPower, powerFont, pwrAvg.format("%d"), Gfx.TEXT_JUSTIFY_RIGHT);
+        dc.drawText(xPower+2, yUnit, Gfx.FONT_SMALL, "W", Gfx.TEXT_JUSTIFY_LEFT);
+        if (showZoneBar) {
+            dc.drawText(1, yZone, zoneFont, "Z" + zone.format("%d"), Gfx.TEXT_JUSTIFY_LEFT);
+            dc.drawText(fWidth - 1, yZone, zoneFont, zonePercent.format("%2d") + "%", Gfx.TEXT_JUSTIFY_RIGHT);
         }
         else {
-            dc.drawText(fWidth / 2, yZone, Gfx.FONT_TINY, zValue, Gfx.TEXT_JUSTIFY_CENTER);
+            dc.drawText(fWidth / 2, yZone, zoneFont, zValue, Gfx.TEXT_JUSTIFY_CENTER);
         }
     }
 
-    function fillVerticalBar(dc, percentValue, x, y, w, h, barColor, frameColor) {
-        var yValue = (percentValue.toFloat() * (h-2).toFloat() / 100.0 + 0.5).toNumber();
-        var gradLarge = (w.toFloat() / 3.0 + 0.5).toNumber();
-        var gradSmall = (w.toFloat() / 6.0 + 0.5).toNumber();
-        var yHalf = h.toFloat() / 2.0;
-        var yQuarter = h.toFloat() / 4.0;
-        var radius = (yQuarter < w) ? yQuarter / 2 : w / 2;
-        // fill bar graph
-        dc.setColor(barColor, Gfx.COLOR_TRANSPARENT);
-
-        dc.setClip(x, y+h-yValue-1, w, yValue);
-        dc.fillRoundedRectangle(x, y, w, h, radius);
-        dc.clearClip();
-
-        // draw outline and graduation marks
-        dc.setColor(frameColor, Gfx.COLOR_TRANSPARENT);
-        dc.drawRoundedRectangle(x, y, w, h, radius);
-
-        dc.drawLine(x, yHalf, x+gradLarge, yHalf);
-        dc.drawLine(x+w-gradLarge, yHalf, x+w, yHalf);
-
-        dc.drawLine(x, yQuarter, x+gradSmall, yQuarter);
-        dc.drawLine(x+w-gradSmall, yQuarter+1, x+w, yQuarter);
-        dc.drawLine(x, h-yQuarter, x+gradSmall, h-yQuarter);
-        dc.drawLine(x+w-gradSmall, h-yQuarter, x+w, h-yQuarter);
-    }
-
-    function fillHorizontalBar(dc, zone, value, x, y, w, h) {
+    // Draws a sliding horizontal bar
+    function drawPowerZoneBar(dc, zone, value, x, y, w, h) {
         var backgroundColor = getBackgroundColor();
         var colorsActive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsActiveBlack : colorsActiveWhite;
         var colorsInactive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsDimmedBlack : colorsDimmedWhite;
@@ -252,43 +229,41 @@ class PWRzonesView extends Ui.DataField {
             return;
         }
         var yBarPos = y + h / 8;
-        var yBarSize = h / 2;
+        var yBarSize = h * 5 / 8;
         // try to fit two whole zones on screen (this will usually mean one full and two partial zones are displayed)
         var zoneWidth = (w.toFloat() / 2.0).toNumber() - 2;
         var radius = (zoneWidth / 4 < h) ? zoneWidth / 8 : w / 2;
         var xOffset = (value.toFloat() * (zoneWidth).toFloat() / 100.0 + 0.5).toNumber();
         var xBarPos = x + w / 2.0 - xOffset;
 
-        // draw current zone, using clip region to fill the dimmed portion
+        // draw current zone
         dc.setColor(colorsActive[zone], colorsInactive[zone]);
         dc.fillRoundedRectangle(xBarPos, yBarPos, zoneWidth, yBarSize, radius);
-        dc.setClip(x + w/2, y, zoneWidth - xOffset, h);
+        dc.setClip(x + w/2, y, zoneWidth - xOffset, h);  // using clip to fill the dimmed portion
         dc.setColor(colorsInactive[zone], Gfx.COLOR_TRANSPARENT);
         dc.fillRoundedRectangle(xBarPos, yBarPos, zoneWidth, yBarSize, radius);
         dc.clearClip();
+
+        // outline current zone
         dc.setColor(outlineColor, Gfx.COLOR_TRANSPARENT);
         dc.drawRoundedRectangle(xBarPos, yBarPos, zoneWidth, yBarSize, radius);
 
-        // draw neighbouring zones (if any)
-        dc.setClip(x, y, w, h);  // clip to borders of the bar so we don't overwrite something else
+        // draw adjacent zones (if any)
+        dc.setClip(x, y, w, h);  // clip to bar borders so we don't overwrite something else
         if (zone > 1) {
             dc.setColor(colorsActive[zone-1], Gfx.COLOR_TRANSPARENT);
             dc.fillRoundedRectangle(xBarPos-zoneWidth-1, yBarPos, zoneWidth, yBarSize, radius);
-//            dc.setColor(outlineColor, Gfx.COLOR_TRANSPARENT);
-//            dc.fillRoundedRectangle(x + xPos-zoneWidth-1, y, zoneWidth, h, radius);
         }
         if (zone < 7) {
             dc.setColor(colorsInactive[zone+1], Gfx.COLOR_TRANSPARENT);
             dc.fillRoundedRectangle(xBarPos + zoneWidth+1, yBarPos, zoneWidth, yBarSize, radius);
-//            dc.setColor(outlineColor, Gfx.COLOR_TRANSPARENT);
-//            dc.fillRoundedRectangle(x + xPos + zoneWidth+1, y, zoneWidth, h, radius);
         }
         dc.clearClip();
 
-        // draw pointer at the middle of the bar
+        // draw pointer and vertical line at the middle of the bar
         var xPointer = (x + w / 2).toNumber();
-        var yPointer = (y + h * 5 / 8) + 1;
-        var hPointer = (h / 4.0).toNumber();
+        var yPointer = (y + h * 6 / 8) + 1;
+        var hPointer = (h / 6.0 + 0.5).toNumber();
         var wHalf = hPointer;
         var coordPoly = [[xPointer, yPointer], [xPointer - wHalf, yPointer + hPointer],
                          [xPointer + wHalf, yPointer + hPointer], [xPointer, yPointer]];
@@ -297,28 +272,18 @@ class PWRzonesView extends Ui.DataField {
         dc.drawLine(xPointer, y, xPointer, yPointer + hPointer);
     }
 
-    function debug_testColors(dc, zone, x, y, w, h) {
-        var backgroundColor = getBackgroundColor();
-        var colorsActive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsActiveBlack : colorsActiveWhite;
-        var colorsInactive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsDimmedBlack : colorsDimmedWhite;
-        dc.setColor(colorsInactive[zone], Gfx.COLOR_TRANSPARENT);
-        dc.fillRectangle(x, y, w, h/2);
-        dc.setColor(colorsActive[zone], Gfx.COLOR_TRANSPARENT);
-        dc.fillRectangle(x, y+h/2, w, h/2);
-    }
-
-
+    //
     function calculateZone(power) {
         if (power == null or $.ftpValue == null) {
             // no power data, return dummy value
             zone = 0; zonePercent = null;
             return;
         }
-        var ratio = power.toFloat() / ftpValue.toFloat();
+        var ratio = power.toFloat() / $.ftpValue.toFloat();
         if (ratio > 1.5) {
             // max effort zone is open-ended by definition, but we limit it to 1500W
             zone = 7;
-            var ratioMax = (1500.0 - 1.5 * ftpValue.toFloat()) / ftpValue.toFloat();
+            var ratioMax = (1500.0 - 1.5 * $.ftpValue.toFloat()) / $.ftpValue.toFloat();
             zonePercent = 100.0 * (ratio - 1.5) / ratioMax;
         }
         else if (ratio > 1.2) {
@@ -347,4 +312,48 @@ class PWRzonesView extends Ui.DataField {
         }
         zonePercent = zonePercent.toNumber();
     }
+
+    // -----------------------------------------------------------------------------------------------------------
+    // DEBUG function - testing palette colors for zone display
+    function debug_displayPalette() {
+        var ddw = 10;
+        debug_testColors(dc, 1, 0, 30, ddw, fHeight-30);
+        debug_testColors(dc, 2, ddw, 30, ddw, fHeight-30);
+        debug_testColors(dc, 3, ddw*2, 30, ddw, fHeight-30);
+        debug_testColors(dc, 4, ddw*3, 30, ddw, fHeight-30);
+        debug_testColors(dc, 5, fWidth-ddw*3, 30, ddw, fHeight-30);
+        debug_testColors(dc, 6, fWidth-ddw*2, 30, ddw, fHeight-30);
+        debug_testColors(dc, 7, fWidth-ddw, 30, ddw, fHeight-30);
+    }
+
+    function debug_testColors(dc, zone, x, y, w, h) {
+        var backgroundColor = getBackgroundColor();
+        var colorsActive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsActiveBlack : colorsActiveWhite;
+        var colorsInactive = (backgroundColor == Gfx.COLOR_BLACK) ? colorsDimmedBlack : colorsDimmedWhite;
+        dc.setColor(colorsInactive[zone], Gfx.COLOR_TRANSPARENT);
+        dc.fillRectangle(x, y, w, h/2);
+        dc.setColor(colorsActive[zone], Gfx.COLOR_TRANSPARENT);
+        dc.fillRectangle(x, y+h/2, w, h/2);
+    }
+    // DEBUG function - test fonts
+    function debug_printFonts() {
+        var ddw = 10;
+        debug_drawFont(dc, 0, yPower, "0", Gfx.FONT_SYSTEM_NUMBER_MILD);
+        debug_drawFont(dc, 25, yPower, "0", Gfx.FONT_NUMBER_MILD);
+        debug_drawFont(dc, 50, yPower, "0", Gfx.FONT_NUMBER_MEDIUM);
+        debug_drawFont(dc, 75, yPower, "0", Gfx.FONT_NUMBER_MILD);
+        debug_drawFont(dc, 100, yPower, "0", Gfx.FONT_SYSTEM_LARGE);
+        debug_drawFont(dc, 125, yPower, "0", Gfx.FONT_GLANCE_NUMBER);
+        debug_drawFont(dc, 150, yPower, "0", Gfx.FONT_SYSTEM_NUMBER_MEDIUM);
+        debug_drawFont(dc, 0, yZone, "Z1 100%", Gfx.FONT_XTINY);
+        debug_drawFont(dc, 50, yZone, "Z1 100%", Gfx.FONT_TINY);
+        debug_drawFont(dc, 100, yZone, "Z1 100%", Gfx.FONT_GLANCE);
+    }
+
+    function debug_drawFont(dc, x, y, text, font) {
+        var outlineColor = (getBackgroundColor() == Gfx.COLOR_BLACK) ? Gfx.COLOR_WHITE: Gfx.COLOR_BLACK;
+        dc.setColor(outlineColor, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(x, y, font, text, Gfx.TEXT_JUSTIFY_LEFT);
+    }
+
 }
